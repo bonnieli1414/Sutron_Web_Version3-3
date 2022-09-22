@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>InGo_PLC - 速創科技</title>
+  <meta name="description" content="專為自動化整合打造的積木平台，輕鬆上手! 無背景的程式新手，不需學習各種複雜的程式語言，就能快速實現各種自動化的需求。">
+  <link rel="icon" type="image/x-icon" href="./assets/images/ingo.ico">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <header class="bg-primary">
+    <div class="js-box-shadow">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="./index.html" title="速創科技">
+          <img class="w-60 py-3" src="./assets/images/Stron-W.png" alt="速創科技">
+        </a>
+        <input id="nav-toggle" class="ham-toggle d-none" type="checkbox">
+        <label for="nav-toggle" class="ham-menu">
+          <div class="ham-frame">
+            <div class="ham-bar ham-bar--top"></div>
+            <div class="ham-bar ham-bar--middle"></div>
+            <div class="ham-bar ham-bar--bottom"></div>
+          </div>
+        </label>
+        <nav class="header-nav">
+            <ul class="list-menu d-flex justify-content-between align-items-center bg-primary border-md-bottom">
+              <!-- lg-hover父層選單 -->
+              <li class="list-menu-item">
+                <a class="list-menu-item-link px-4 py-6 d-none d-lg-block" href="#"><h6>關於我們</h6></a>
+                <!-- lg-hover子層選單 -->
+                <ul class="list-menu-child">
+                  <li><a href="./index.html">首頁</a></li>
+                  <li><a href="./about.html">關於我們</a></li>
+                  <li class="rounded-bottom"><a href="./news.html">最新消息</a></li>
+                </ul>
+              </li>
+              <!-- lg-hover父層選單 -->
+              <li class="list-menu-item">
+                <a class="list-menu-item-link px-4 py-6 d-none d-lg-block" href="#"><h6>InGo解決方案</h6></a>
+                <!-- lg-hover的子層選單 -->
+                <ul class="list-menu-child">
+                  <li><a href="./solution.html">InGo工業平台</a></li>
+                  <li class="rounded-bottom"><a href="./agriculture.html">InGo智慧農業</a></li>
+                </ul>
+              </li>
+              <!-- lg-hover父層選單 -->
+              <li class="list-menu-item">
+                <a class="list-menu-item-link px-4 py-6 d-none d-lg-block" href="#"><h6>InGo手冊</h6></a>
+                <!-- lg-hover的子層選單 -->
+                <ul class="list-menu-child">
+                  <li class="rounded-bottom"><a href="https://hackmd.io/@mfp3wSxaTM6RhuB3AF7CFA/InGo-manual" target="_blank">InGo手冊</a></li>
+                </ul>
+              </li>
+              <!-- lg-hover父層選單 -->
+              <li class="list-menu-item">
+                <a class="list-menu-item-link px-4 py-6 d-none d-lg-block" href="#"><h6>聯繫我們</h6></a>
+                <!-- lg-hover的子層選單 -->
+                <ul class="list-menu-child">
+                  <li><a href="./contact.html">聯絡資訊</a></li>
+                  <li class="rounded-bottom"><a href="./messageBoard.html">留言板</a></li>
+                </ul>
+              </li>
+              <!-- lg-hover父層選單 -->
+              <li class="list-menu-item">
+                <a class="list-menu-item-link px-4 py-6 d-none d-lg-block" href="#"><h6>程式積木</h6></a>
+                <!-- lg-hover的子層選單 -->
+                <ul class="list-menu-child">
+                  <li><a href="./member-login.html">會員登入</a></li>
+                  <li><a href="./member-register.html">會員註冊</a></li>
+                  <li><a href="./member-getPassword.html">忘記密碼</a></li>
+                  <li class="rounded-bottom"><a href="./member-changePassword.html">修改密碼</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- 改手風琴選單 -->
+            <div class="accordion accordion-flush" id="accordionFlush">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <div class="border-md-top">
+                    <button class="container accordion-button collapsed d-lg-none bg-primary text-light py-6" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"><h6>關於我們</h6>
+                    </button>
+                  </div>
+                  
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
+                  <div class="accordion-body list-menu-child-toggle p-0">
+                    <ul class="d-lg-none">
+                      <li><a href="./index.html">首頁</a></li>
+                      <li><a href="./about.html">關於我們</a></li>
+                      <li class="rounded-bottom"><a href="./news.html">最新消息</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <div class="border-md-top">
+                    <button class="container accordion-button collapsed d-lg-none bg-primary text-light py-6" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      <h6>InGo解決方案</h6>
+                    </button>
+                  </div>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush">
+                  <div class="accordion-body list-menu-child-toggle p-0">
+                    <ul class="d-lg-none">
+                      <li><a href="./solution.html">InGo工業平台</a></li>
+                      <li><a href="./agriculture.html">InGo智慧農業</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <div class="border-md-top">
+                    <button class="container accordion-button collapsed d-lg-none bg-primary text-light py-6" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      <h6>InGo手冊</h6>
+                    </button>
+                  </div>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush">
+                  <div class="accordion-body list-menu-child-toggle p-0">
+                    <ul class="d-lg-none">
+                      <li><a href="https://hackmd.io/@mfp3wSxaTM6RhuB3AF7CFA/InGo-manual" target="_blank">InGo手冊</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <div class="border-md-top">
+                    <button class="container accordion-button collapsed d-lg-none bg-primary text-light py-6" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      <h6>聯繫我們</h6>
+                    </button>
+                  </div>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlush">
+                  <div class="accordion-body list-menu-child-toggle p-0">
+                    <ul class="d-lg-none">
+                      <li><a href="./contact.html">聯絡資訊</a></li>
+                      <li class="rounded-bottom"><a href="./messageBoard.html">留言板</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                  <div class="border-md-top">
+                    <button class="container accordion-button collapsed d-lg-none bg-primary text-light py-6" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                      <h6>程式積木</h6>
+                    </button>
+                  </div>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlush">
+                  <div class="accordion-body list-menu-child-toggle p-0">
+                    <ul class="d-lg-none">
+                      <li><a href="./member-login.html">會員登入</a></li>
+                      <li><a href="./member-register.html">會員註冊</a></li>
+                      <li><a href="./member-getPassword.html">忘記密碼</a></li>
+                      <li class="rounded-bottom"><a href="./member-changePassword.html">修改密碼</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="product-PLC">
+    <div class="container pt-6 pb-15">
+        <h1>相同語言控制不同品牌 – PLC –<span class="text-warning">舊機活化  資料上傳 機況透析</span></h1>
+        <section class="text-center py-6">
+            <img class="w-50 mx-auto py-4" src="./assets/images/products/product-PLC/PLC01.png" alt="inGo積木">
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center py-6">
+                <img class="w-50 px-4 py-4" src="./assets/images/products/product-PLC/PLC02.png" alt="三菱PLC">
+                <img class="w-50 px-4 py-4" src="./assets/images/products/product-PLC/PLC03.png" alt="OMRON PLC">
+            </div>
+        </section>
+    </div>
+</div>
+
+
+  <footer class="bg-primary py-15">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="box-primary d-flex flex-column gap-8 border-sm-bottom my-4">
+            <div class="stron"></div>
+            <div class="d-flex flex-column justify-content-between align-items-center gap-8">
+              <p class="text-light text-center">Copyright © 2022 Sutron.All rights reserved.</p>
+              <ul class="d-flex flex-column ">
+                <li>
+                  <a class="d-flex align-items-center py-4 gap-1" href="tel:+886-917-693-204">
+                    <p class="img-contact img-contact-phone"></p>
+                    <span>James</span>0917-693-204
+                  </a>
+                </li>
+                <li>
+                  <a class="d-flex align-items-center py-4 gap-1" href="mailto:james.cheng@su-tron.com">
+                    <p class="img-contact img-contact-mail"></p>
+                    <span>james.cheng@su-tron.com</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-7 mx-auto col-md-8 px-1 d-flex justify-content-end">
+          <div class="box-secondary d-flex flex-wrap px-2 ps-md-15 gap-6 gap-lg-2">
+            <ul class="px-0 px-md-2 py-4">
+              <li>
+                <h6 class="text-white">關於我們</h6>
+                <ul class="py-3">
+                  <li><a class="py-3" href="./index.html">首頁</a></li>
+                  <li><a class="py-3" href="./about.html">關於我們</a></li>
+                  <li><a class="py-3" href="./news.html">最新消息</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="px-0 px-md-2 py-4">
+              <li>
+                <h6 class="text-white">InGo解決方案</h6>
+                <ul class="py-3">
+                  <li><a class="py-3" href="./solution.html">InGo工業平台</a></li>
+                  <li><a class="py-3" href="./agriculture.html">InGo智慧農業</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="px-0 px-md-2 py-4">
+              <li>
+                <h6 class="text-white">InGo手冊</h6>
+                <ul class="py-3">
+                  <li><a class="py-3" href="https://hackmd.io/@mfp3wSxaTM6RhuB3AF7CFA/InGo-manual" target="_blank">InGo手冊</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="px-0 px-md-2 py-4">
+              <li>
+                <h6 class="text-white">聯繫我們</h6>
+                <ul class="py-3">
+                  <li><a class="py-3" href="./contact.html">聯絡資訊</a></li>
+                  <li><a class="py-3" href="./messageBoard.html">留言板</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="px-0 px-md-2 py-4">
+              <li>
+                <h6 class="text-white">程式積木</h6>
+                <ul class="py-3">
+                  <li><a class="py-3" href="./member-login.html">會員登入</a></li>
+                  <li><a class="py-3" href="./member-register.html">會員註冊</a></li>
+                  <li><a class="py-3" href="./member-getPassword.html">忘記密碼</a></li>
+                  <li><a class="py-3" href="./member-changePassword.html">修改密碼</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="./assets/js/vendors.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+</html>
