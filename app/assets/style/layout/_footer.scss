@@ -1,0 +1,32 @@
+footer {
+    .stron {
+        height: 80px;
+        background-color: $footer-icon-primary;
+        -webkit-mask: url("../../assets/images/Stron-G.png") no-repeat center center;
+        mask: url("../../assets/images/Stron-G.png") no-repeat center center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+    }
+    .img-contact {
+        width: 36px; 
+        height: 36px;
+        @include mobile {
+            width: 24px; 
+            height: 24px;
+        }
+    }
+    .img-contact-phone {
+        background-color: $footer-icon-primary;
+        -webkit-mask: url("../../assets/images/smartphone.png") no-repeat center center;
+        mask: url("../../assets/images/smartphone.png") no-repeat center center;
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+    }
+    .img-contact-mail {
+        background-color: $footer-icon-primary;
+        -webkit-mask: url("../../assets/images/mail.png") no-repeat center center;
+        mask: url("../../assets/images/mail.png") no-repeat center center;
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+    }
+}

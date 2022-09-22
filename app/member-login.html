@@ -1,0 +1,31 @@
+---
+title: 會員登入 - 速創科技
+layout: ./app/layout.ejs
+engine: ejs
+current: member-login
+---
+<div class="member-login">
+    <div class="js-scrolled"></div>
+    <div class="container pt-6 pb-15">
+        <form class="member px-10 pt-4 pb-15" action="#">
+            <img src="./assets/images/ingo.ico" alt="InGo Logo" style="height: 86px;">
+            <h3>會員登入</h3>
+            <ul>
+                <li class="py-2">
+                    <label for="email">電子信箱</label><br>
+                    <input class="w-100 py-2 my-2" type="email" name="email" id="email" placeholder="xxx@gmail.com">
+                </li>
+                <li class="py-2">
+                    <label for="password">密碼</label><br>
+                    <input class="w-100 py-2 my-2" type="password" name="password" id="password" placeholder="英數字混合6~12位密碼">
+                </li>
+                <li>
+                    <input type="submit" class="w-100 py-2 my-2 btn btn-primary text-white bold" value="登入">
+                </li>
+            </ul>
+            <p><a class="text-primary py-4" href="./member-getPassword.html">忘記密碼？</a></p>
+            <hr>
+            <p class="w-100 btn btn-warning py-2"><a class="text-center bold py-2" href="./member-register.html">還不是會員嗎？點我註冊</a></p>
+        </form>
+    </div>
+</div>

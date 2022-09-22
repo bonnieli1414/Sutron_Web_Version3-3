@@ -1,0 +1,121 @@
+@mixin pad {
+    @media screen and (max-width: $pad-width) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: $mobile-width) {
+        @content;
+    }
+}
+
+// 製作 ham-menu
+@mixin ham-menu {
+    // 先製作 ham-menu
+    .ham-menu {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 20%;
+        background: $ham-menu-bg-primary;
+    }
+    // 製作 ham-menu外框做相對定位
+    .ham-frame {
+        position: relative;
+        top: 50%;
+    }
+    // 製作 ham-menu 三根技巧
+    .ham-bar {
+        height: 3px;
+        width: 30px;
+        background-color: $ham-icon-bar-primary;
+        position: absolute;
+        left: 5px;
+    }
+    .ham-bar--top {
+      transform: translateY(-7px);
+    }
+    .ham-bar--bottom {
+      transform: translateY(7px);
+    }
+    // 製作 ham-menu checked後圖形變成打叉圖示
+    .ham-toggle:checked ~ .ham-menu .ham-frame .ham-bar--middle {
+      opacity: 0;
+    }
+    .ham-toggle:checked ~ .ham-menu .ham-frame .ham-bar--top {
+      transform: rotate(-45deg);
+    }
+    .ham-toggle:checked ~ .ham-menu .ham-frame .ham-bar--bottom {
+      transform: rotate(45deg);
+    }
+    .header-nav {
+        width: 100%;
+        text-align: center;
+        background-color: $ham-icon-bg-primary;
+        position: absolute;
+        z-index: 9999;
+        top: 65px;
+        left: 0%;
+        // left: -100%; //也可藏在左邊，不用動畫
+        transform: translateY(-200%);
+        transition: transform .5s;
+    }
+    .ham-toggle:checked ~ .header-nav {
+        // left: 0%; //也可藏在左邊，checked後再打開，不用動畫
+        transform: none;
+    }
+    .list-menu {
+        display: block;
+        flex-direction: column;
+    }
+    .list-menu-item {
+        @include pad {
+            width: 100%;
+        }
+    }
+    .list-menu-item-link {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
+// 響應式手機或pad版時引入ham-menu
+@media screen and (max-width: $pad-width) {
+    @include ham-menu;
+}
+
+// 製作 banner
+@mixin banner {
+    // background-image: url("../image/index_Sutron.jpg");
+    // background讓背景圖片隨著螢幕大小自適應
+    // max-width: 100%;
+    // 以圖片的寬除以長度計算比例
+    // padding-top: 448px / 1052px * 130%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+// 優化圖片SEO技巧
+// 文字對SEO的影響力大於圖片，
+// h1若要改放置圖片，可在h1標籤@include image-replaces-text;
+@mixin image-replaces-text {
+    // background-image: url("../image/index_Sutron.jpg");
+    // background讓背景圖片隨著螢幕大小自適應
+    max-width: 100%;
+    // 以圖片的寬除以長度計算比例
+    // padding-top: 423px / 752px * 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    // 強迫文字縮排至原本的區域外
+    text-indent: 101%;
+    // 不進行換行
+    white-space: nowrap;
+    // 將超出範圍的內容隱藏
+    overflow: hidden;
+}
+// 由h1標籤引入image-replaces-text
+// h1 {
+//     @include image-replaces-text;
+// }

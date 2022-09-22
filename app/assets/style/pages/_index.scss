@@ -1,0 +1,277 @@
+.page-index {
+    .banner-sutron-lg {
+        background-image: url("../../assets/images/index/Sutron-LG.png");
+        height: 500px;
+        @include banner;
+    }
+    .banner-sutron-md {
+        background-image: url("../../assets/images/index/Sutron-SM.png");
+            height: 500px;
+            @include banner;
+    }
+    .banner-sutron-sm {
+        background-image: url("../../assets/images/index/Sutron-SM.png");
+            height: 400px;
+            @include banner;
+    }
+    .banner-sutron {
+        background-image: url("../../assets/images/index/Sutron-LG.png");
+        height: 500px;
+        @include banner;
+        @include pad {
+            background-image: url("../../assets/images/index/Sutron-SM.png");
+            height: 500px;
+            @include banner;
+        }
+        @include mobile {
+            background-image: url("../../assets/images/index/Sutron-SM.png");
+            height: 400px;
+            @include banner;
+        }
+    }
+    .arc {
+        position: relative;
+        width: 100%;
+        background-color: #fff;
+    }
+    .arc:after {
+      position: absolute;
+      left: 0;
+      right: 0;
+    //   bottom: -100px;
+      z-index: 2;
+      content: ' ';
+      height: 120px;
+      width: 100%;
+      border-radius: 0 0 50% 50%;
+      background-color: #fff;
+      @include mobile {
+        height: 90px;
+        bottom: -60px;
+        border-radius: 0 0 50% 50%;
+        
+      }
+    }
+    .pill {
+        width: 140px;
+        padding: 4px 16px;
+        cursor: auto;
+        @include mobile {
+            width: 100px;
+            padding: 4px 12px;
+            margin-top: 36px;
+        }
+    }
+    .InGo-LG {
+        width: 316px;
+        padding-top: 34px;
+        padding-bottom: 34px;
+        @include pad {
+            width: 252px;
+            padding-top: 28px;
+            padding-bottom: 28px;
+        }
+        @include mobile {
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+    }
+    .btn-md-about {
+        // width: 160px;
+        height: 60px;
+        border-radius: 10px;
+        margin-top: 70px;
+        @include mobile {
+            display: none;
+        }
+    }
+    .btn-sm-about {
+        display: none;
+        @include mobile {
+            display: block;
+            width: 140px;
+            height: 45px;
+            border-radius: 10px;
+            margin-top: 70px;
+        }
+    }
+    .card {
+        position: relative;
+        height: 488px;
+        box-shadow: 0px 4px #0000002e;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        @include pad {
+            height: 388px;
+        }
+        @include mobile {
+            height: 418px;
+            margin: 0 auto;
+            margin-bottom: 24px;
+        }
+    }
+    .card-head {
+        width: 100%;
+        height: 288px;
+        padding-top: 40px;
+        @include pad {
+            height: 200px;
+        }
+        @include mobile {
+            height: 258px;
+        }
+    }
+    .card-body {
+        position:absolute;
+        top: 288px;
+        bottom: 0px;
+        width: 100%;
+        padding: 32px 24px;
+        @include pad {
+            top: 200px;
+            padding: 16px 12px;
+        }
+        @include mobile {
+            top: 258px;
+            padding: 20px 12px;
+        }
+    }
+    .card-text {
+        padding: 0 6px;
+    }
+    .card-img {
+        width: 158px;
+        @include pad {
+            width: 98px;
+        }
+        @include mobile {
+            width: 158px;
+        }
+    }
+    .box {
+        background-color: #ffffff1c;
+        width: 578px;
+        margin: 0 auto;
+        border-radius: 12px;
+        padding: 32px;
+        margin-top: 48px;
+        @include mobile {
+            width: 327px;
+            margin: 0 auto;
+            padding: 16px;
+            margin-top: 28px;
+        }
+    }
+    .circle-group1 {
+        position: absolute;
+        z-index: 1;
+        right: 3%;
+        bottom: -220px;
+        @include mobile {
+            bottom: -150px;
+        }
+    }
+    .circle-2 {
+        padding-bottom: 80px;
+    }
+    .circle-3 {
+        position: absolute;
+        top: -30px;
+        right: 5%;
+        z-index: 1;
+    }
+    .circle-group2 {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        z-index: 1;
+        @include pad {
+            top: 12%;
+            left: -20%;
+        }
+        @include mobile {
+            top: 50%;
+            left: -5%;
+        }
+    }
+    .circle-4 {
+        position: relative;
+        z-index: 1;
+    }
+    .circle-6 {
+        width: 100px;
+        height: 134px;
+        top: 450%;
+        right: 0%;
+        background-image: url("../../assets/images/index/Background-Gray2.png");
+        background-repeat: repeat-y;
+        @include pad {
+            top: 310%;
+        }
+        @include mobile {
+            background-size: contain;
+            width: 60px;
+            height: 80px;
+            top: 265%;
+            right: 25%;
+        }
+    }
+    .circle-7 {
+        width: 132px;
+        height: 62px;
+        top: 0;
+        right: -70px;
+        background-image: url("../../assets/images/index/Background-Gray.png");
+        background-repeat: no-repeat;
+        @include mobile {
+            background-image: url("../../assets/images/index/Background-Gray2.png");
+            background-size: contain;
+            width: 60x;
+            height: 34px;
+            top: 10px;
+            right: -100px;
+        }
+    }
+    .circle-8 {
+        width: 132px;
+        height: 62px;
+        top: -45px;
+        left: -90px;
+        background-image: url("../../assets/images/index/Background-Gray.png");
+        background-repeat: no-repeat;
+        @include mobile {
+            background-image: url("../../assets/images/index/Background-Gray2.png");
+            background-size: contain;
+            transform: rotate(90deg);
+            width: 62px;
+            height: 132px;
+            top: -175px;
+            left: -60px;
+        }
+    }
+    .circle-9 {
+        bottom: -25px;
+        left: -14px;
+        @include mobile {
+            bottom: -35px;
+            left: -100px;
+        }
+    }
+}
+.page-about {
+    .banner {
+        background-image: url("../../assets/images/index/about1.jpg");
+        height: 300px;
+        padding-left: 10%;
+        @include banner;
+    }
+}
+.page-news {
+    .banner {
+        background-image: url("../../assets/images/index/news1.jpg");
+        height: 300px;
+        padding-right: 10%;
+        @include banner;
+    }
+}
