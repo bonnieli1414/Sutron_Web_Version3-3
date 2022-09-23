@@ -24022,7 +24022,14 @@ header .accordion-button::after {
 
 @media screen and (max-width: 992px) {
   header .accordion {
-    height: 345px;
+    height: 294.92px;
+    overflow-y: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header .accordion {
+    height: 278.92px;
     overflow-y: auto;
   }
 }
@@ -24801,7 +24808,7 @@ footer {
 
 @media screen and (max-width: 767px) {
   .page-contact .map-iframe {
-    height: 400px;
+    height: 350px;
   }
 }
 
